@@ -16,7 +16,7 @@ O aplicativo utiliza a API de localização do Google Play Services para obter a
 
 ## Dados do Aluno
 
-- **Nome:** Luiz Alberto
+- **Nome:** Luiz Alberto dos Passos
 - **RA:** 1919946
 - **Curso:** Análise e Desenvolvimento de Sistemas (ADS)
 - **Período:** 6º período
