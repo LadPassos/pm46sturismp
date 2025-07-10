@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Permissões necessárias para as funcionalidades do app -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!-- Indica que a câmera é um recurso utilizado, mas não obrigatório -->
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PM46STurismo">
+
+        <!-- Chave da API do Google Maps -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDsy454kAkXofX828BEMieAQ7EbtpjohZY" /> <!-- Substitua por sua chave real em produção -->
+
+        <!-- SplashActivity: tela inicial exibida ao abrir o app -->
+        <activity
+            android:name=".ui.activities.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Demais Activities do app -->
+        <activity android:name=".ui.activities.MainActivity" />
+        <activity android:name=".ui.activities.MenuPrincipalActivity" />
+        <activity android:name=".ui.activities.CadastroPontoActivity" />
+        <activity android:name=".ui.activities.ListaPontosActivity" />
+        <activity android:name=".ui.activities.ConfiguracoesActivity" />
+        <activity android:name=".ui.activities.MapaActivity" />
+        <activity android:name=".ui.activities.EditarPontoActivity" />
+        <activity android:name=".DetalhesPontoActivity" />
+
+
+    </application>
+</manifest>

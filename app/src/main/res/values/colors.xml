@@ -1,0 +1,12 @@
+<resources>
+    <!-- Amarelo-limão: fundo principal, usado no splash e menus -->
+    <color name="amarelo_limao">#E2FF00</color>
+    <!-- Azul escuro: títulos, destaques e botões -->
+    <color name="azul_escuro">#0F0F4D</color>
+    <!-- Rosa: botões principais, ação, chamar atenção -->
+    <color name="rosa">#FF1A74</color>
+    <!-- Branco: fundos e textos claros -->
+    <color name="branco">#FFFFFF</color>
+    <!-- Preto: textos, contraste e ícones -->
+    <color name="preto">#000000</color>
+</resources>

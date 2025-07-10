@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout da tela de detalhes do ponto turístico.
+    Exibe informações completas, imagens, endereço, mapa, distância e botões de ação.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/branco"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Nome do ponto turístico -->
+        <TextView
+            android:id="@+id/textoNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome do Ponto"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/azul_escuro"
+            android:gravity="center"
+            android:paddingBottom="8dp" />
+
+        <!-- Imagem do ponto turístico -->
+        <ImageView
+            android:id="@+id/imagemPonto"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:background="@color/amarelo_limao"
+            android:contentDescription="Imagem do ponto turístico" />
+
+        <!-- Descrição do ponto -->
+        <TextView
+            android:id="@+id/textoDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descrição do ponto turístico"
+            android:textSize="16sp"
+            android:textColor="@color/preto"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp" />
+
+        <!-- Endereço/Coordenada -->
+        <TextView
+            android:id="@+id/textoEnderecoCoordenada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Endereço: "
+            android:textColor="@color/preto"
+            android:textSize="15sp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textStyle="italic"/>
+
+        <!-- Imagem do mapa estático -->
+        <ImageView
+            android:id="@+id/imagemMapa"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:background="@color/azul_escuro"
+            android:contentDescription="Imagem do mapa" />
+
+        <!-- Distância do usuário até o ponto -->
+        <TextView
+            android:id="@+id/textoDistancia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Distância: -- km"
+            android:textSize="16sp"
+            android:textColor="@color/preto"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp" />
+
+        <!-- Linha de botões: Favoritar e Compartilhar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="2"
+            android:paddingBottom="8dp">
+
+            <Button
+                android:id="@+id/btnFavoritar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Favoritar"
+                android:textColor="@color/branco"
+                android:backgroundTint="@color/rosa" />
+
+            <Button
+                android:id="@+id/btnCompartilhar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Compartilhar"
+                android:textColor="@color/branco"
+                android:backgroundTint="@color/azul_escuro"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Linha de botões: Ver no Mapa e Ir até lá -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnVerMapa"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Ver no Mapa"
+                android:textColor="@color/branco"
+                android:backgroundTint="@color/azul_escuro" />
+
+            <Button
+                android:id="@+id/btnIr"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Ir até lá"
+                android:textColor="@color/branco"
+                android:backgroundTint="@color/amarelo_limao"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

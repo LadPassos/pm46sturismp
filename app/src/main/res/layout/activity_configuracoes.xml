@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout da tela de configurações do mapa.
+    Permite ao usuário escolher o tipo de mapa e o nível de zoom padrão.
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/amarelo_limao"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Título da seção de zoom -->
+    <TextView
+        android:text="Nível de Zoom Padrão:"
+        android:textColor="@color/azul_escuro"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- SeekBar para selecionar o zoom padrão do mapa -->
+    <SeekBar
+        android:id="@+id/seekZoom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="20"
+        android:progress="12" />
+
+    <!-- Exibe o valor atual do zoom -->
+    <TextView
+        android:id="@+id/textZoomValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zoom: 12"
+        android:textColor="@color/preto" />
+
+    <!-- Título da seção de tipo de mapa -->
+    <TextView
+        android:text="Tipo de Mapa:"
+        android:textColor="@color/azul_escuro"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Grupo de opções para tipo de mapa -->
+    <RadioGroup
+        android:id="@+id/grupoTipoMapa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Opção Normal -->
+        <RadioButton
+            android:id="@+id/opcaoNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Normal" />
+
+        <!-- Opção Satélite -->
+        <RadioButton
+            android:id="@+id/opcaoSatelite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Satélite" />
+
+        <!-- Opção Híbrido -->
+        <RadioButton
+            android:id="@+id/opcaoHibrido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Híbrido" />
+
+        <!-- Opção Terreno -->
+        <RadioButton
+            android:id="@+id/opcaoTerreno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terreno" />
+    </RadioGroup>
+
+    <!-- Exibe o tipo selecionado dinamicamente -->
+    <TextView
+        android:id="@+id/textTipoSelecionado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo selecionado: Normal"
+        android:textColor="@color/preto"
+        android:layout_marginTop="8dp" />
+
+    <!-- Botão para salvar as configurações -->
+    <Button
+        android:id="@+id/botaoSalvarConfiguracoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salvar"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/branco"
+        android:backgroundTint="@color/rosa" />
+</LinearLayout>

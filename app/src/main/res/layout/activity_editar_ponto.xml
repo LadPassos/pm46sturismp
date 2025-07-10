@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout para a tela de edição de ponto turístico.
+    Permite alterar nome, descrição, endereço, fotos e mapa.
+    Mantém o padrão visual do app com as cores da marca.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/amarelo_limao"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <!-- Logo do app -->
+        <ImageView
+            android:layout_width="308dp"
+            android:layout_height="224dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="Logo"
+            android:src="@drawable/logo_pm46s" />
+
+        <!-- Título da tela -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EDITAR PONTO TURÍSTICO"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/azul_escuro"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Campo para o nome do ponto -->
+        <EditText
+            android:id="@+id/editarNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome do Ponto Turístico"
+            android:backgroundTint="@color/azul_escuro" />
+
+        <!-- Campo para descrição -->
+        <EditText
+            android:id="@+id/editarDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descrição"
+            android:backgroundTint="@color/azul_escuro"
+            android:layout_marginTop="8dp" />
+
+        <!-- Campo para endereço -->
+        <EditText
+            android:id="@+id/editarEndereco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Endereço completo"
+            android:backgroundTint="@color/azul_escuro"
+            android:layout_marginTop="8dp" />
+
+        <!-- Botão para buscar mapa/coords -->
+        <Button
+            android:id="@+id/botaoBuscarMapa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscar Mapa e Coordenadas"
+            android:backgroundTint="@color/rosa"
+            android:textColor="@color/branco"
+            android:layout_marginTop="8dp" />
+
+        <!-- Botão para tirar foto -->
+        <Button
+            android:id="@+id/botaoFoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tirar Foto (opcional)"
+            android:backgroundTint="@color/rosa"
+            android:textColor="@color/branco"
+            android:layout_marginTop="8dp" />
+
+        <!-- Botão para escolher da galeria -->
+        <Button
+            android:id="@+id/botaoGaleria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Escolher da Galeria (opcional)"
+            android:backgroundTint="@color/rosa"
+            android:textColor="@color/branco"
+            android:layout_marginTop="4dp" />
+
+        <!-- Imagem do ponto -->
+        <ImageView
+            android:id="@+id/imagemPonto"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="8dp" />
+
+        <!-- Imagem do mapa estático -->
+        <ImageView
+            android:id="@+id/imagemMapa"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="8dp" />
+
+        <!-- Exibe as coordenadas do ponto selecionado -->
+        <TextView
+            android:id="@+id/textoCoordenadas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Coordenadas:"
+            android:textColor="@color/preto"
+            android:layout_marginTop="8dp" />
+
+        <!-- Botão para salvar alterações -->
+        <Button
+            android:id="@+id/botaoSalvar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salvar"
+            android:backgroundTint="@color/rosa"
+            android:textColor="@color/branco"
+            android:layout_marginTop="16dp" />
+
+        <!-- Botão para excluir ponto -->
+        <Button
+            android:id="@+id/botaoExcluir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Excluir Ponto Turístico"
+            android:backgroundTint="@color/preto"
+            android:textColor="@color/branco"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+</ScrollView>

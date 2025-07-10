@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout da tela para seleção de local no mapa.
+    Exibe o mapa em tela cheia e um botão para confirmar a escolha do local.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/containerSelecionarLocal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Fragmento do Google Maps exibindo o mapa interativo -->
+    <fragment
+        android:id="@+id/mapView"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Botão para confirmar o local selecionado, fixado na parte inferior central -->
+    <Button
+        android:id="@+id/botaoConfirmarLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmar Local"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/rosa"
+        android:textColor="@color/branco"/>
+</FrameLayout>

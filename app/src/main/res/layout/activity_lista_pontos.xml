@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout da tela de listagem dos pontos turísticos.
+    Possui campo de busca e exibe os itens em um RecyclerView.
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/branco"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Título da tela -->
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lista de Pontos Turísticos"
+        android:textSize="20sp"
+        android:textColor="@color/azul_escuro"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="12dp" />
+
+    <!-- Campo de busca com ícone de lupa -->
+    <EditText
+        android:id="@+id/inputBusca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Buscar ponto turístico..."
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:background="@drawable/borda_edittext"
+        android:padding="10dp"
+        android:inputType="text" />
+
+    <!-- Lista dos pontos turísticos -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewPontos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1" />
+</LinearLayout>

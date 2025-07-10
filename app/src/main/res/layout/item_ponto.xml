@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout de cada item da lista de pontos turísticos no RecyclerView.
+    Exibe nome, descrição, favorito, e botões de ação.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp"
+    android:backgroundTint="@color/branco"
+    android:elevation="1dp">
+
+    <!-- Linha principal: Favorito, Nome e botão de estrela -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Indicador colorido de favorito (círculo rosa), só aparece se favorito -->
+        <View
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circulo_favorito"
+            android:visibility="gone"
+            android:id="@+id/favoritoIndicador" />
+
+        <!-- Nome do ponto -->
+        <TextView
+            android:id="@+id/textoNome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/azul_escuro" />
+
+        <!-- Botão de estrela para favoritar/desfavoritar -->
+        <ImageButton
+            android:id="@+id/btnFavoritar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/btn_star_big_off"
+            android:background="@android:color/transparent"
+            android:contentDescription="Favoritar" />
+    </LinearLayout>
+
+    <!-- Descrição do ponto turístico -->
+    <TextView
+        android:id="@+id/textoDescricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/preto"
+        android:paddingTop="4dp" />
+
+    <!-- Linha divisória -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/azul_escuro"
+        android:layout_marginVertical="8dp" />
+
+    <!-- Linha de botões de ação: Detalhes, Editar, Excluir -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="2dp">
+
+        <!-- Botão de detalhes -->
+        <Button
+            android:id="@+id/btnVerDetalhes"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Ver Detalhes"
+            android:textColor="@color/branco"
+            android:backgroundTint="@color/azul_escuro"
+            android:layout_marginEnd="6dp"/>
+
+        <!-- Botão de editar -->
+        <Button
+            android:id="@+id/btnEditar"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Editar"
+            android:textColor="@color/branco"
+            android:backgroundTint="@color/amarelo_limao"
+            android:layout_marginEnd="6dp"/>
+
+        <!-- Botão de excluir -->
+        <Button
+            android:id="@+id/btnExcluir"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Excluir"
+            android:textColor="@color/branco"
+            android:backgroundTint="@color/rosa"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout para a tela de cadastro de novo ponto turístico.
+    Segue o padrão de cores do app e utiliza ScrollView para garantir rolagem em telas pequenas.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/amarelo_limao">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Logo do app -->
+        <ImageView
+            android:id="@+id/logoApp"
+            android:layout_width="340dp"
+            android:layout_height="228dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="Logo do app"
+            android:src="@drawable/logo_pm46s" />
+
+        <!-- Título da tela -->
+        <TextView
+            android:id="@+id/textoTituloCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CADASTRAR NOVO PONTO TURÍSTICO"
+            android:textColor="@color/rosa"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Campo para nome do ponto -->
+        <EditText
+            android:id="@+id/editarNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome do Ponto Turístico"
+            android:backgroundTint="@color/rosa"
+            android:textColor="@color/preto"
+            android:textColorHint="@color/preto" />
+
+        <!-- Campo para descrição -->
+        <EditText
+            android:id="@+id/editarDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descrição"
+            android:backgroundTint="@color/rosa"
+            android:textColor="@color/preto"
+            android:textColorHint="@color/preto"
+            android:layout_marginTop="8dp" />
+
+        <!-- Campo para endereço -->
+        <EditText
+            android:id="@+id/editarEndereco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Endereço completo"
+            android:backgroundTint="@color/rosa"
+            android:textColor="@color/preto"
+            android:textColorHint="@color/preto"
+            android:layout_marginTop="8dp" />
+
+        <!-- Botão para buscar mapa e coordenadas -->
+        <Button
+            android:id="@+id/botaoBuscarMapa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscar Mapa e Coordenadas"
+            android:backgroundTint="@color/rosa"
+            android:textColor="@color/branco"
+            android:layout_marginTop="8dp" />
+
+        <!-- Botão para tirar foto -->
+        <Button
+            android:id="@+id/botaoFoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tirar Foto"
+            android:backgroundTint="@color/rosa"
+            android:textColor="@color/branco"
+            android:layout_marginTop="8dp" />
+
+        <!-- Botão para escolher foto da galeria -->
+        <Button
+            android:id="@+id/botaoGaleria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Escolher da Galeria"
+            android:backgroundTint="@color/rosa"
+            android:textColor="@color/branco"
+            android:layout_marginTop="4dp" />
+
+        <!-- Imagem do ponto turístico -->
+        <ImageView
+            android:id="@+id/imagemPonto"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="8dp"
+            android:contentDescription="Imagem do ponto turístico" />
+
+        <!-- Imagem do mapa estático -->
+        <ImageView
+            android:id="@+id/imagemMapa"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="8dp"
+            android:contentDescription="Imagem do mapa" />
+
+        <!-- Texto exibindo as coordenadas -->
+        <TextView
+            android:id="@+id/textoCoordenadas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Coordenadas:"
+            android:textColor="@color/preto"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <!-- Botão de salvar -->
+        <Button
+            android:id="@+id/botaoSalvar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salvar"
+            android:textColor="@color/branco"
+            android:backgroundTint="@color/rosa"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</ScrollView>

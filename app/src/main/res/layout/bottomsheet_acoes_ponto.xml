@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout para o BottomSheet de ações rápidas sobre um ponto turístico no mapa.
+    Permite ver detalhes ou editar o ponto selecionado.
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/branco"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Nome do ponto turístico, destacado no topo -->
+    <TextView
+        android:id="@+id/textoNomeSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome do ponto"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/azul_escuro"
+        android:gravity="center"
+        android:paddingBottom="20dp" />
+
+    <!-- Botão para abrir detalhes completos do ponto -->
+    <Button
+        android:id="@+id/botaoDetalhesSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver Detalhes"
+        android:textColor="@color/branco"
+        android:backgroundTint="@color/rosa"
+        android:textSize="16sp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Botão para editar o ponto -->
+    <Button
+        android:id="@+id/botaoEditarSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Editar"
+        android:textColor="@color/branco"
+        android:backgroundTint="@color/rosa"
+        android:textSize="16sp" />
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <!-- Nome do aplicativo (aparece em menus e título da janela) -->
+    <string name="app_name">PM46STurismo</string>
+    <!-- Slogan exibido na tela inicial ou splash -->
+    <string name="slogan">Os seus pontos turísticos favoritos na palma da sua mão</string>
+    <!-- Texto do botão de entrada principal -->
+    <string name="botao_entrar">Entrar</string>
+    <!-- Descrição da logo (acessibilidade) -->
+    <string name="logo_desc">Logo do PM46S Turismo</string>
+</resources>

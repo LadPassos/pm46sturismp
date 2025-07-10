@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Ícone adaptativo para o aplicativo Android.
+    Composto por camadas separadas de fundo e primeiro plano,
+    que o sistema usa para aplicar máscaras e animações.
+-->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Camada de fundo do ícone -->
+    <background android:drawable="@drawable/ic_launcher_background"/>
+
+    <!-- Camada do primeiro plano (imagem principal) -->
+    <foreground android:drawable="@drawable/ic_launcher_foreground"/>
+
+</adaptive-icon>

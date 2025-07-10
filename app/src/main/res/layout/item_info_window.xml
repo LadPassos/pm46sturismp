@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout personalizado para a InfoWindow do marcador no Google Maps.
+    Exibe imagem, nome, descrição, endereço/coordenada e botão de opções.
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="@color/branco"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Imagem do ponto turístico -->
+    <ImageView
+        android:id="@+id/imagemInfo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="Imagem do ponto" />
+
+    <!-- Coluna de textos e ações -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:paddingStart="12dp">
+
+        <!-- Nome do ponto turístico -->
+        <TextView
+            android:id="@+id/textoNome"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/azul_escuro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Descrição curta do ponto -->
+        <TextView
+            android:id="@+id/textoDescricao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/preto" />
+
+        <!-- Coordenadas ou endereço resumido -->
+        <TextView
+            android:id="@+id/textoCoordenadas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/preto" />
+
+        <!-- Linha com botões de ação -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <!-- Botão para mostrar opções do ponto -->
+            <Button
+                android:id="@+id/botaoOpcoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opcoes"
+                android:textColor="@color/branco"
+                android:backgroundTint="@color/rosa"
+                android:textSize="12sp"
+                android:paddingHorizontal="12dp"
+                android:layout_marginEnd="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
